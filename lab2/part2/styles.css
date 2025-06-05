@@ -9,14 +9,6 @@ table {
   font-size: 0.8rem;
 }
 
-.planet-name {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  background-color: #f8f8f8; /* optional, just for visibility */
-  padding: 6px;
-}
-
-
 td, th {
   border: 1px solid rgb(190,190,190);
   padding: 10px 20px;
