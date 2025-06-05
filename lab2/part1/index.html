@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!--
+         Name: Jaspal Singh
+         File: index.html
+         Date: 05-06-2025
+         Description Lab2-part1 - Mozilla splash page
+-->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Mozilla splash page</title>
@@ -10,7 +17,7 @@
 
       html {
         font-family: 'Open Sans', sans-serif;
-        background: url(pattern.png);
+        background: url(./images/pattern.png);
       }
 
       body {
@@ -99,14 +106,20 @@
   <body>
     <header>
       <h1>Mozilla</h1>
-      <!-- insert <img> element, link to the small
-          version of the Firefox logo -->
+      <img src="./images/firefox_logo-only_RGB.png" alt="top logo firefox">
 
     </header>
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
+    <iframe
+    width = "520"  
+    height="260"
+    src="https://www.youtube.com/embed/ojcNcvb1olg"
+    title="YT "
+    style="border: none;"
+    allowfullscreen>
+    </iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -116,25 +129,34 @@
       </article>
 
       <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
+        <!-- images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img src="./images/firefox_logo-only_RGB.png" alt="firefox">
+          
         </a>
         <a href="https://www.mozilla.org/">
-          <img>
+          <img src="./images/mozilla-dinosaur-head.png" alt="mozilla-dinosaur-head">
+         
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img src="./images/firefox-addons.jpg" alt="puzzle">
+          
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="./images/mdn.svg" alt="Mozilla">
+          
         </a>
         <div class="clearfix"></div>
       </div>
 
+      
       <div class="red-panda">
-        <!-- insert picture element -->
-      </div>
+        <picture>
+          <source media="(min-width:600px)" srcset="./images/red-panda-Copy.jpg">
+          <img src="./images/red-panda-Copy-400.jpg" alt="Red Panda in a Tree" style="width:auto;">
+    </picture>
+</div>
+      
 
     </main>
   </body>
