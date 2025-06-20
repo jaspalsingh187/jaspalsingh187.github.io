@@ -42,4 +42,114 @@ header, footer {
   border-bottom: 5px solid #a66;
 }
 
-/* WRITE YOUR CODE BELOW HERE */
+/* fonts */
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('fonts/RobotoSlab-Bold.woff2') format('woff2');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('fonts/Merriweather-Regular.woff2') format('woff2');
+}
+
+/*general typography */
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  word-spacing: 0.4px;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/*first paragraph indent */
+section h2 + p {
+  text-indent: 20px;
+}
+
+/*lists */
+ul, ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  line-height: 1.6;
+  list-style-type: square;
+}
+
+/*links styles */
+a:link,
+a:visited {
+  color: #a66;
+  text-decoration:underline;
+}
+
+a:hover,
+a:focus {
+  color: #800000;
+  text-decoration: underline;
+  outline: none;
+}
+
+a:active {
+  color: #fff;
+  background-color: #a66;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+a[href^="https://en.wikipedia.org"]::after {
+  content: "";
+  display: inline-block;
+  background: url('images/external-link.svg') no-repeat center center;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+
+nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #a66;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+nav a:hover {
+  background-color: #f0d8d8;
+  color: #a66;
+}
