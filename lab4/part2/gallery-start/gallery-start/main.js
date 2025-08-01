@@ -5,44 +5,39 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const imageFiles = [
-  'images/pic1.jpg',
-  'images/pic2.jpg',
-  'images/pic3.jpg',
-  'images/pic4.jpg',
-  'images/pic5.jpg'
-];
 
-/* Declaring the alternative text for each image file */
-const altText = [
-  'Closeup of a human eye',
-  'Rock that looks like a wave',
-  'Purple and white pansies',
-  'Section of wall from a pharaoh\'s tomb',
-  'Large moth on a leaf'
-];
+const images = ['pic1.jpg','pic2.jpg', 'pic3.jpg','pic4.jpg','pic5.jpg'];
+const alts = {
+  'pic1.jpg' : 'human eye',
+  'pic2.jpg' : 'Rock wave',
+  'pic3.jpg' : 'pansies',
+  'pic4.jpg' : 'Section of wall',
+  'pic5.jpg' : 'moth'
+}
+
 /* Looping through images */
-for (let i = 0; i < imageFiles.length; i++){
-    const newImage = document.createElement('img');
-    newImage.setAttribute('src', xxx);
-    newImage.setAttribute('alt', xxx);
-    thumbBar.appendChild(newImage);
 
-newImage.addEventListener('click', function () {
-    displayedImage.setAttribute('src', imageFiles[i]);
-    displayedImage.setAttribute('alt', altText[i]);
+for (const image of images) {
+  const newImage = document.createElement('img');
+  newImage.setAttribute('src', images/${image});
+  newImage.setAttribute('alt', alts[image]);
+  thumbBar.appendChild(newImage);
+  newImage.addEventListener('click', e => {
+    displayedImage.src = e.target.src;
+    displayedImage.alt = e.target.alt;
   });
 }
 
 /* Wiring up the Darken/Lighten button */
-btn.addEventListener('click', function () {
+
+btn.addEventListener('click', () => {
   const btnClass = btn.getAttribute('class');
   if (btnClass === 'dark') {
-    btn.setAttribute('class', 'light');
+    btn.setAttribute('class','light');
     btn.textContent = 'Lighten';
     overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
   } else {
-    btn.setAttribute('class', 'dark');
+    btn.setAttribute('class','dark');
     btn.textContent = 'Darken';
     overlay.style.backgroundColor = 'rgba(0,0,0,0)';
   }
