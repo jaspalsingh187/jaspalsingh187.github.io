@@ -166,7 +166,7 @@ td {
   text-align: center;
 }
 
-/* support your current thead <td> */
+/* support current thead <td> */
 thead td,
 th[scope="col"] {
   border-bottom: 1px solid black;
